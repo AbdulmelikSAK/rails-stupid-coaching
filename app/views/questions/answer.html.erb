@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Stupid Coaching</h1>
+
+  <div class="container-answer">
+    <h2> <%= @question %> </h2>
+    <h2>-You</h2>
+  </div>
+  <div class="container-answer coach">
+    <% if @question == "I am going to work" %>
+      <h2>Great !</h2>
+    <% elsif @question[-1] == "?" %>
+      <h2>Silly question, get dressed and go to work!</h2>
+    <% else  %>
+      <h2>I don't care, get dressed and go to work!</h2>
+    <% end %>
+    <h2>-Your Coach</h2>
+  </div>
+
+  <%= link_to "Ask a new question", ask_path  %>
+</div>
